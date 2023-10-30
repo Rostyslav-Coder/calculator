@@ -1,5 +1,91 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 1px solid black;
+  font-family: "Federant";
+  /* font-family: "Kumar One Outline"; */
+  /* border: 1px solid black; */
+}
+
+.layer-1 {
+  background-image: url(images/stp-1.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(30%);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: -5;
+}
+
+.layer-2 {
+  background-image: url(images/gears-2.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotate(180deg);
+  filter: grayscale(25%);
+  left: -50px;
+  top: -40px;
+  height: 120vh;
+  width: 45vw;
+  position: fixed;
+  z-index: -4;
+}
+
+.layer-3 {
+  background-image: url(images/gears-2.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(15%);
+  right: -80px;
+  top: -50px;
+  height: 130vh;
+  width: 40vw;
+  position: fixed;
+  z-index: -3;
+}
+
+.layer-4 {
+  background-image: url(images/rust-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(30%);
+  transform: skewX(-3deg);
+  border: 5px solid #222;
+  border-radius: 10px 0 10px 0;
+  box-shadow: 0 0 50px 20px #000;
+  left: 25%;
+  top: 5%;
+  height: 18vh;
+  width: 65vw;
+  position: fixed;
+  z-index: -2;
+}
+
+.layer-4 p {
+  color: #222;
+  font-size: 2.5em;
+  font-weight: 900;
+  text-align: end;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 0 10px;
+}
+
+.layer-5 {
+  background-image: url(images/rust-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(30%);
+  transform: skewX(3deg);
+  border: 5px solid #222;
+  border-radius: 0 10px 0 10px;
+  box-shadow: 0 0 50px 20px #000;
+  left: 15%;
+  top: 30%;
+  height: 68vh;
+  width: 68vw;
+  position: fixed;
+  z-index: -1;
 }
