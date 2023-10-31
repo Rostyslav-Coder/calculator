@@ -3,8 +3,15 @@
   margin: 0;
   padding: 0;
   font-family: "Federant";
-  /* font-family: "Kumar One Outline"; */
-  /* border: 1px solid black; */
+  /* border: 1px solid white; */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
 }
 
 .layer-1 {
@@ -16,7 +23,7 @@
   height: 100vh;
   width: 100vw;
   position: fixed;
-  z-index: -5;
+  z-index: -3;
 }
 
 .layer-2 {
@@ -30,7 +37,7 @@
   height: 120vh;
   width: 45vw;
   position: fixed;
-  z-index: -4;
+  z-index: -2;
 }
 
 .layer-3 {
@@ -43,7 +50,7 @@
   height: 130vh;
   width: 40vw;
   position: fixed;
-  z-index: -3;
+  z-index: -1;
 }
 
 .layer-4 {
@@ -55,22 +62,39 @@
   border: 5px solid #222;
   border-radius: 10px 0 10px 0;
   box-shadow: 0 0 50px 20px #000;
-  left: 25%;
-  top: 5%;
-  height: 18vh;
+  height: 22vh;
   width: 65vw;
-  position: fixed;
-  z-index: -2;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 0 12px;
 }
 
-.layer-4 p {
+.layer-4 .face {
+  display: flex;
+  flex-grow: 1;
+  height: 80px;
+}
+
+.f1, .f2, .f3, .f4, .f5, .f6, .f7, .f8 {
+  background-color: #222;
+  border: 2px solid #b07208;
+  border-radius: 5px;
+  box-shadow: 0 0 18px 8px #000;
+  flex-grow: 1;
+}
+
+.layer-4 .logo {
+  transform: skewX(3deg);
   color: #222;
   font-size: 2.5em;
   font-weight: 900;
   text-align: end;
   text-transform: uppercase;
   letter-spacing: 3px;
-  padding: 0 10px;
+  text-shadow: 2px 2px 5px #b07208;
 }
 
 .layer-5 {
@@ -82,10 +106,52 @@
   border: 5px solid #222;
   border-radius: 0 10px 0 10px;
   box-shadow: 0 0 50px 20px #000;
-  left: 15%;
-  top: 30%;
   height: 68vh;
-  width: 68vw;
-  position: fixed;
-  z-index: -1;
+  width: 60vw;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 1 0;
+}
+
+.buttons {
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 16% 16% 16% 16% 16% 16%;
+  justify-content: space-between;
+}
+
+.button {
+  background-color: #222;
+  border: 2px solid #b07208;
+  border-radius: 0 10% 0 10%;
+  margin: 8px 16px;
+  padding: 3px 26px;
+  text-align: center;
+  box-shadow: 0 0 18px 8px #000;
+}
+
+.button p {
+  transform: skewX(-3deg);
+  color: #b07208;
+  font-size: 1.8em;
+  cursor: pointer;
+}
+
+.info {
+  transform: rotate(90deg);
+  background-color: #222;
+  border: 2px solid #b07208;
+  margin-top: 140px;
+  margin-left: 110px;
+}
+
+.info a {
+  text-decoration: none;
+  font-size: 1.6em;
+  text-wrap: nowrap;
+  color: #b07208;
+  letter-spacing: 1px;  
 }
