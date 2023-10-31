@@ -111,8 +111,7 @@ body {
   margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  flex: 1 1 0;
+  align-items: flex-end;
 }
 
 .buttons {
@@ -127,8 +126,8 @@ body {
   background-color: #222;
   border: 2px solid #b07208;
   border-radius: 0 10% 0 10%;
-  margin: 8px 16px;
-  padding: 3px 26px;
+  margin: 6px 16px;
+  padding: 4px 26px;
   text-align: center;
   box-shadow: 0 0 18px 8px #000;
 }
@@ -141,11 +140,10 @@ body {
 }
 
 .info {
-  transform: rotate(90deg);
   background-color: #222;
   border: 2px solid #b07208;
-  margin-top: 140px;
-  margin-left: 110px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .info a {
