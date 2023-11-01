@@ -3,22 +3,14 @@
   margin: 0;
   padding: 0;
   font-family: "Federant";
+  font-weight: 900;
   /* border: 1px solid white; */
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: 25px;
-}
-
-.layer-1 {
+.down-bg {
   background-image: url(images/stp-1.jpg);
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
   filter: brightness(30%);
   height: 100vh;
   width: 100vw;
@@ -26,99 +18,109 @@ body {
   z-index: -3;
 }
 
-.layer-2 {
+.middle-bg-1 {
   background-image: url(images/gears-2.gif);
-  background-repeat: no-repeat;
   background-size: cover;
   transform: rotate(180deg);
   filter: grayscale(25%);
-  left: -50px;
-  top: -40px;
+  left: -2.5em;
+  top: -2em;
   height: 120vh;
   width: 45vw;
   position: fixed;
   z-index: -2;
 }
 
-.layer-3 {
+.middle-bg-2 {
   background-image: url(images/gears-2.gif);
-  background-repeat: no-repeat;
   background-size: cover;
   filter: grayscale(15%);
-  right: -80px;
-  top: -50px;
+  right: -4em;
+  top: -2.3em;
   height: 130vh;
   width: 40vw;
   position: fixed;
   z-index: -1;
 }
 
-.layer-4 {
+.working-surface {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.2em;
+}
+
+.scoreboard {
   background-image: url(images/rust-1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   filter: grayscale(30%);
   transform: skewX(-3deg);
   border: 5px solid #222;
-  border-radius: 10px 0 10px 0;
-  box-shadow: 0 0 50px 20px #000;
-  height: 22vh;
-  width: 65vw;
-  margin-top: 15px;
+  border-radius: 0 10px 0 10px;
+  box-shadow: 0 0 2em 1em #000;
+  margin-top: 1.1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 15px;
-  padding: 0 12px;
+  gap: 2.8em;
+  padding: 0.8em;
 }
 
-.layer-4 .face {
+.display {
   display: flex;
   flex-grow: 1;
-  height: 80px;
 }
 
-.f1, .f2, .f3, .f4, .f5, .f6, .f7, .f8 {
+.num-1, .num-2, .num-3,
+.num-4, .num-5, .num-6,
+.num-7, .num-8, .num-9 {
   background-color: #222;
   border: 2px solid #b07208;
+  color: #b07208;
+  font-size: 1.8em;
   border-radius: 5px;
-  box-shadow: 0 0 18px 8px #000;
+  box-shadow: 0 0 1em 0.5em #000;
   flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2em;
+  height: 3em;
 }
 
-.layer-4 .logo {
+.logo {
+  background-color: #222;
+  padding: 0.3em;
+  border: 2px solid #b07208;
+  border-radius: 5px;
+  box-shadow: 0 0 1em 0.5em #000;
+}
+
+.logo p {
   transform: skewX(3deg);
-  color: #222;
-  font-size: 2.5em;
-  font-weight: 900;
-  text-align: end;
+  color: #b07208;
+  font-size: 2.4em;
   text-transform: uppercase;
-  letter-spacing: 3px;
-  text-shadow: 2px 2px 5px #b07208;
+  letter-spacing: 2px;
 }
 
-.layer-5 {
+.keyboard {
   background-image: url(images/rust-1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   filter: grayscale(30%);
   transform: skewX(3deg);
   border: 5px solid #222;
-  border-radius: 0 10px 0 10px;
-  box-shadow: 0 0 50px 20px #000;
-  height: 68vh;
-  width: 60vw;
-  margin-bottom: 15px;
+  border-radius: 10px 0 10px 0;
+  box-shadow: 0 0 2em 1em #000;
+  margin-bottom: 1.2em;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
 
 .buttons {
-  padding-top: 10px;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 16% 16% 16% 16% 16% 16%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
   justify-content: space-between;
 }
 
@@ -126,17 +128,21 @@ body {
   background-color: #222;
   border: 2px solid #b07208;
   border-radius: 0 10% 0 10%;
-  margin: 6px 16px;
-  padding: 4px 26px;
+  margin: 0.4em 1em;
+  padding: 0.6em 1.6em;
   text-align: center;
-  box-shadow: 0 0 18px 8px #000;
+  box-shadow: 0 0 1.2em 0.5em #000;
+  cursor: pointer;
 }
 
 .button p {
   transform: skewX(-3deg);
   color: #b07208;
-  font-size: 1.8em;
-  cursor: pointer;
+  font-size: 2.2em;
+}
+
+.button:last-child {
+  grid-column: 3 / span 2;
 }
 
 .info {
@@ -144,6 +150,8 @@ body {
   border: 2px solid #b07208;
   display: flex;
   justify-content: flex-end;
+  padding: 0.2em;
+  margin: 0.4em 1em;
 }
 
 .info a {
